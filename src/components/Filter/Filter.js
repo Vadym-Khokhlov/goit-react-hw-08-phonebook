@@ -1,12 +1,13 @@
 import React from 'react';
+import { FilterInput, FilterLabel } from './Filter.styled';
 
 const Filter = ({ value, onChange }) => {
   return (
     <>
-      <label>
+      <FilterLabel>
         Find number by name
-        <input type="text" value={value} onChange={onChange} />
-      </label>
+        <FilterInput type="text" value={value} onChange={onChange} />
+      </FilterLabel>
     </>
   );
 };

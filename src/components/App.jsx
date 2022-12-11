@@ -3,17 +3,19 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 import { nanoid } from 'nanoid';
+import { AppHeading, SectionHeading } from './App.styled';
 
 export class App extends React.Component {
   state = {
     contacts: [
-      { id: 'id-1', name: 'Harry Potter', number: '22-22-22' },
+      { id: 'id-1', name: 'Harry Potter', number: '11-11-11' },
       { id: 'id-2', name: 'Hermione Granger', number: '33-33-33' },
-      { id: 'id-3', name: 'Ronald Weasley', number: '44-44-44' },
+      { id: 'id-3', name: 'Ronald Weasley', number: '22-22-22' },
       { id: 'id-4', name: 'Sirius Black', number: '55-55-55' },
       { id: 'id-5', name: 'Albus Dumbledore', number: '77-77-77' },
       { id: 'id-6', name: 'Tom Riddle', number: '66-66-66' },
       { id: 'id-7', name: 'Alastor Moody', number: '88-88-88' },
+      { id: 'id-8', name: 'Belatrix Lestrange', number: '44-44-44' },
     ],
     filter: '',
   };
@@ -34,8 +36,6 @@ export class App extends React.Component {
       contacts: [contact, ...prevState.contacts],
     }));
   };
-
-  checkContact = () => {};
 
   deleteContact = contactId => {
     this.setState(prevState => ({
@@ -61,9 +61,9 @@ export class App extends React.Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <>
-        <h1>PhoneBook</h1>
+        <AppHeading>PhoneBook</AppHeading>
         <ContactForm onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <SectionHeading>Contacts</SectionHeading>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={visibleContacts}
