@@ -13,5 +13,8 @@ export const FilterInput = styled.input`
   width: 160px;
   height: 30px;
   border-radius: 10px;
-  background-color: lightsalmon;
+  background-color: silver;
+  color: floralwhite;
+  padding-left: 10px;
+  font-size: 20px;
 `;
