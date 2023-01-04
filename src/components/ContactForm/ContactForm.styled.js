@@ -5,13 +5,13 @@ export const Form = styled.form`
   margin-right: auto;
   border: 2px solid darkslategray;
   border-radius: 25px;
-  width: 62%;
+  max-width: 1150px;
   height: 200px;
   background-color: silver;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 70px;
 `;
 
 export const Label = styled.label`
