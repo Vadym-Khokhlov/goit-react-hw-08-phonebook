@@ -11,7 +11,7 @@ const Filter = () => {
   return (
     <>
       <FilterLabel>
-        Find number by name
+        Find phone number by name
         <FilterInput
           type="text"
           value={filter}
