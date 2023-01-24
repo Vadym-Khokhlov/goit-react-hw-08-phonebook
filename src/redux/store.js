@@ -35,10 +35,6 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  // reducer: {
-  //   contacts: contactsReducer,
-  //   filter: filtersReducer,
-  // },
 });
 
 export const persistor = persistStore(store);
