@@ -11,7 +11,7 @@ export const FilterLabel = styled.label`
 
 export const FilterInput = styled.input`
   width: 160px;
-  height: 32px;
+  height: 30px;
   border-radius: 10px;
   background-color: silver;
   color: floralwhite;
