@@ -15,7 +15,6 @@ const ContactList = () => {
   };
 
   const visibleContacts = getVisibleContacts();
-  // console.log(visibleContacts);
 
   return (
     <>
