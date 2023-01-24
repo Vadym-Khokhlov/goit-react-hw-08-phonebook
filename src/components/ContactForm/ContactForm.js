@@ -48,7 +48,6 @@ const ContactForm = () => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             placeholder="+3807777777"
-            // onChange={handleChange}
           />
         </Label>
         <AddButton type="submit">Add Contact</AddButton>
