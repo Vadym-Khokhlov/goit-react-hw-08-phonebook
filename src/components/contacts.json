@@ -1,10 +1,10 @@
 [
-  { "id": "id-1", "name": "Harry Potter", "number": "11-11-11" },
-  { "id": "id-2", "name": "Hermione Granger", "number": "33-33-33" },
-  { "id": "id-3", "name": "Ronald Weasley", "number": "22-22-22" },
-  { "id": "id-4", "name": "Sirius Black", "number": "55-55-55" },
-  { "id": "id-5", "name": "Albus Dumbledore", "number": "77-77-77" },
-  { "id": "id-6", "name": "Tom Riddle", "number": "66-66-66" },
-  { "id": "id-7", "name": "Alastor Moody", "number": "88-88-88" },
-  { "id": "id-8", "name": "Belatrix Lestrange", "number": "44-44-44" }
+  { "id": "id-1", "contactName": "Harry Potter", "number": "11-11-11" },
+  { "id": "id-2", "contactName": "Hermione Granger", "number": "33-33-33" },
+  { "id": "id-3", "contactName": "Ronald Weasley", "number": "22-22-22" },
+  { "id": "id-4", "contactName": "Sirius Black", "number": "55-55-55" },
+  { "id": "id-5", "contactName": "Albus Dumbledore", "number": "77-77-77" },
+  { "id": "id-6", "contactName": "Tom Riddle", "number": "66-66-66" },
+  { "id": "id-7", "contactName": "Alastor Moody", "number": "88-88-88" },
+  { "id": "id-8", "contactName": "Belatrix Lestrange", "number": "44-44-44" }
 ]

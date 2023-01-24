@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact } from 'redux/contactsSlice';
+import { getContacts } from 'redux/selectors';
 import { AddButton, Form, Input, Label } from './ContactForm.styled';
 
-const ContactForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
+const ContactForm = () => {
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
   const handleSubmit = e => {
     e.preventDefault();
-
-    onSubmit({ name, number });
-    reset();
-  };
-
-  const handleChange = e => {
-    const input = e.currentTarget.name;
-    switch (input) {
-      case 'name':
-        setName(e.currentTarget.value);
-        break;
-      case 'number':
-        setNumber(e.currentTarget.value);
-        break;
-      default:
-        return;
+    const form = e.target;
+    const contactName = form.elements.contactName.value;
+    const number = form.elements.number.value;
+    const added = contacts.some(
+      contact => contact.contactName.toLowerCase() === contactName.toLowerCase()
+    );
+    if (added) {
+      alert(`${contactName} is already in your phonebook`);
+    } else {
+      dispatch(addContact([contactName, number]));
+      alert(`${contactName} was succesfully added to your phonebook`);
+      form.reset();
     }
-  };
-
-  const reset = () => {
-    setName('');
-    setNumber('');
   };
 
   return (
@@ -38,13 +31,12 @@ const ContactForm = ({ onSubmit }) => {
           Name
           <Input
             type="text"
-            name="name"
+            name="contactName"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
             placeholder="Godrick Gryffindor"
-            value={name}
-            onChange={handleChange}
+            // onChange={handleChange}
           />
         </Label>
         <Label>
@@ -56,8 +48,7 @@ const ContactForm = ({ onSubmit }) => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             placeholder="+3807777777"
-            value={number}
-            onChange={handleChange}
+            // onChange={handleChange}
           />
         </Label>
         <AddButton type="submit">Add Contact</AddButton>
