@@ -13,7 +13,7 @@ export const ContactListItem = ({ contact }) => {
   return (
     <ContactItem>
       <ContactInfo>
-        <p>{contact.contactName}</p>
+        <p>{contact.name}</p>
         <p>Number: {contact.number}</p>
       </ContactInfo>
       <RemoveButton onClick={handleDelete}>remove</RemoveButton>

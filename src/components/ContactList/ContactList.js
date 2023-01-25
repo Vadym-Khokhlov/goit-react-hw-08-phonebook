@@ -8,9 +8,10 @@ import { getContacts, getInputFilter } from 'redux/selectors';
 const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getInputFilter);
+  console.log(contacts);
   const getVisibleContacts = () => {
     return contacts.filter(contact =>
-      contact.contactName.toLowerCase().includes(filter)
+      contact.name.toLowerCase().includes(filter)
     );
   };
 
@@ -18,9 +19,9 @@ const ContactList = () => {
 
   return (
     <>
-      {contacts.length > 0 && (
+      <SectionHeading>Contacts</SectionHeading>
+      {contacts.length > 0 ? (
         <>
-          <SectionHeading>Contacts</SectionHeading>
           <Filter />
           <Contacts>
             {visibleContacts.map(contact => (
@@ -28,6 +29,8 @@ const ContactList = () => {
             ))}
           </Contacts>
         </>
+      ) : (
+        <p>Your phonebook is emty. Add your first contact</p>
       )}
     </>
   );

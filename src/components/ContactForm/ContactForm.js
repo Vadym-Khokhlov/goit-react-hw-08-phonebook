@@ -10,16 +10,16 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    const contactName = form.elements.contactName.value;
+    const name = form.elements.name.value;
     const number = form.elements.number.value;
     const added = contacts.some(
-      contact => contact.contactName.toLowerCase() === contactName.toLowerCase()
+      contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (added) {
-      alert(`${contactName} is already in your phonebook`);
+      alert(`${name} is already in your phonebook`);
     } else {
-      dispatch(addContact([contactName, number]));
-      alert(`${contactName} was succesfully added to your phonebook`);
+      dispatch(addContact({ name, number }));
+      alert(`${name} was succesfully added to your phonebook`);
       form.reset();
     }
   };
@@ -31,7 +31,7 @@ const ContactForm = () => {
           Name
           <Input
             type="text"
-            name="contactName"
+            name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
