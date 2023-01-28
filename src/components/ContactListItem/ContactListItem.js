@@ -4,7 +4,7 @@ import {
   RemoveButton,
   ContactInfo,
 } from 'components/ContactList/ContactList.styled';
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/operations';
 
 export const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const ContactListItem = ({ contact }) => {
     <ContactItem>
       <ContactInfo>
         <p>{contact.name}</p>
-        <p>Number: {contact.number}</p>
+        <p>Number: {contact.phone}</p>
       </ContactInfo>
       <RemoveButton onClick={handleDelete}>remove</RemoveButton>
     </ContactItem>
