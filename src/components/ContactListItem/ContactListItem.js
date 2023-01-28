@@ -3,7 +3,7 @@ import {
   ContactItem,
   RemoveButton,
   ContactInfo,
-} from 'components/ContactList/ContactList.styled';
+} from 'components/Contacts/ContactList.styled';
 import { deleteContact } from '../../redux/operations';
 
 export const ContactListItem = ({ contact }) => {

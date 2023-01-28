@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Contacts = styled.ul`
+export const ContactList = styled.ul`
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;

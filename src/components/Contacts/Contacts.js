@@ -1,11 +1,11 @@
-import { Contacts } from './ContactList.styled';
+import { ContactList } from './ContactList.styled';
 import { SectionHeading } from 'components/App.styled';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 import Filter from 'components/Filter';
 import { useSelector } from 'react-redux';
 import { selectContacts, selectVisibleContacts } from 'redux/selectors';
 
-const ContactList = () => {
+const Contacts = () => {
   const contacts = useSelector(selectContacts);
   const visibleContacts = useSelector(selectVisibleContacts);
 
@@ -15,11 +15,11 @@ const ContactList = () => {
       {contacts.length > 0 ? (
         <>
           <Filter />
-          <Contacts>
+          <ContactList>
             {visibleContacts.map(contact => (
               <ContactListItem key={contact.id} contact={contact} />
             ))}
-          </Contacts>
+          </ContactList>
         </>
       ) : (
         <p>Your phonebook is emty. Add your first contact</p>
@@ -28,4 +28,4 @@ const ContactList = () => {
   );
 };
 
-export default ContactList;
+export default Contacts;

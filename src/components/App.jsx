@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import ContactList from './ContactList';
+import Contacts from './Contacts';
 import { AppHeading } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
@@ -21,7 +21,7 @@ export const App = () => {
       <AppHeading>PhoneBook</AppHeading>
       <ContactForm />
       {isLoading && !error && <p>Loading...</p>}
-      <ContactList />
+      <Contacts />
     </>
   );
 };
