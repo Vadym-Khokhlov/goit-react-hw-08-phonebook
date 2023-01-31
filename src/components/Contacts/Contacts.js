@@ -3,7 +3,8 @@ import { SectionHeading } from 'components/App.styled';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 import Filter from 'components/Filter';
 import { useSelector } from 'react-redux';
-import { selectContacts, selectVisibleContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
+import { selectVisibleContacts } from 'redux/filter/selectors';
 
 const Contacts = () => {
   const contacts = useSelector(selectContacts);

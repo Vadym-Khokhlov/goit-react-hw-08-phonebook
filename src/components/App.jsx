@@ -3,9 +3,9 @@ import ContactForm from './ContactForm';
 import Contacts from './Contacts';
 import { AppHeading } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 import { useEffect } from 'react';
-import { selectError, selectIsLoading } from 'redux/selectors';
+import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
 export const App = () => {
   const dispatch = useDispatch();

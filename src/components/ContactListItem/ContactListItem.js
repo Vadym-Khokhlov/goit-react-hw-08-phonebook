@@ -4,7 +4,7 @@ import {
   RemoveButton,
   ContactInfo,
 } from 'components/Contacts/ContactList.styled';
-import { deleteContact } from '../../redux/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 
 export const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
