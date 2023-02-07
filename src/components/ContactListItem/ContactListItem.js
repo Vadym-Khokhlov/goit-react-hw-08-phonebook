@@ -3,9 +3,10 @@ import {
   ContactItem,
   RemoveButton,
   ContactInfo,
+  ContactInfoItem,
 } from 'components/Contacts/ContactList.styled';
-import { deleteContact } from '../../redux/contacts/operations';
-
+import { deleteContact } from 'redux/contacts/operations';
+import { GiCrossMark } from 'react-icons/gi';
 export const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(contact.id));
@@ -13,10 +14,12 @@ export const ContactListItem = ({ contact }) => {
   return (
     <ContactItem>
       <ContactInfo>
-        <p>{contact.name}</p>
-        <p>Number: {contact.phone}</p>
+        <ContactInfoItem>Name: {contact.name}</ContactInfoItem>
+        <ContactInfoItem>Number: {contact.number}</ContactInfoItem>
       </ContactInfo>
-      <RemoveButton onClick={handleDelete}>remove</RemoveButton>
+      <RemoveButton onClick={handleDelete}>
+        <GiCrossMark color="antiquewhite" />
+      </RemoveButton>
     </ContactItem>
   );
 };

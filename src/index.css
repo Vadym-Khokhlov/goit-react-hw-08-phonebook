@@ -1,12 +1,11 @@
-@import-normalize; /* bring in normalize.css styles */
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Harry Potter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/body_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -15,5 +14,11 @@ code {
 }
 
 p {
+  margin: 0;
   text-align: center;
+}
+
+section {
+  background-image: url('./images/section_bg.jpg');
+  background-size: 100% 110%;
 }

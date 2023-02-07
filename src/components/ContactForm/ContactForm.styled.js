@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid darkslategray;
-  border-radius: 25px;
-  max-width: 1150px;
-  height: 200px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 2px solid darkslategra y;
+  //border-radius: 25px;
+  width: auto;
+  height: 250px;
   background-color: silver;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ export const Label = styled.label`
   align-items: center;
   gap: 10px;
   font-size: 20px;
-  color: floralwhite;
+  color: darkslategrey;
 `;
 
 export const Input = styled.input`
@@ -27,6 +27,8 @@ export const Input = styled.input`
   height: 30px;
   border-radius: 10px;
   background-color: floralwhite;
+  font-family: serif;
+  font-size: 16px;
 `;
 
 export const AddButton = styled.button`
@@ -34,5 +36,8 @@ export const AddButton = styled.button`
   border-radius: 10px;
   background-color: floralwhite;
   font-size: 20px;
+  display: flex;
   color: green;
+  font: inherit;
+  padding-top: 5px;
 `;

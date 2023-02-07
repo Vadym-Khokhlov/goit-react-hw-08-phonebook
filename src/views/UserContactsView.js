@@ -1,17 +1,20 @@
+import ContactForm from 'components/ContactForm';
+import Contacts from 'components/Contacts';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/auth/operations';
-//import { useAuth } from 'hooks';
+import { fetchContacts } from 'redux/contacts/operations';
 
-export const UserMenu = () => {
+export const UserContactsView = () => {
   const dispatch = useDispatch();
-  //const { user } = useAuth();
+  //const isLoading = useSelector(selectIsLoading);
 
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
   return (
-    <div>
-      <p>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
-        Logout
-      </button>
-    </div>
+    <>
+      <ContactForm />
+      <Contacts />
+    </>
   );
 };

@@ -17,4 +17,5 @@ export const FilterInput = styled.input`
   color: floralwhite;
   padding-left: 10px;
   font-size: 20px;
+  font-family: serif;
 `;
