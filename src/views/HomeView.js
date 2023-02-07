@@ -9,7 +9,7 @@ export function HomeView() {
   const { isLoggedIn } = useAuth();
   return isLoggedIn ? (
     <Homepage>
-      <HomepageLoggedMessage>welcome back</HomepageLoggedMessage>
+      <HomepageLoggedMessage>welcome to magic reality</HomepageLoggedMessage>
     </Homepage>
   ) : (
     <>
