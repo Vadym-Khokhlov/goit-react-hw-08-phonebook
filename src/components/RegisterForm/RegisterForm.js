@@ -28,7 +28,7 @@ export const RegisterForm = () => {
   return (
     <RegisterBlock>
       <RegisterTitle>Registration</RegisterTitle>
-      <RegisterStyledForm onSubmit={handleSubmit}>
+      <RegisterStyledForm onSubmit={handleSubmit} autoComplete="off">
         <RegisterLabel>
           <FaBroom size={25} />
           <RegisterInput type="text" name="name" placeholder="Username" />
