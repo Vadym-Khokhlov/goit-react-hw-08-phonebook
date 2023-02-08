@@ -18,7 +18,7 @@ export const register = createAsyncThunk('auth/register', async credentials => {
     const { data } = await axios.post('/users/signup', credentials);
     return data;
   } catch (error) {
-    toast('invalid email/password ');
+    toast.error('invalid email/password ');
     console.log(error);
   }
 });
@@ -32,7 +32,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      toast('your email or password is incorrect');
+      toast.error('your email or password is incorrect');
       console.log(error);
       return thunkAPI.rejectWithValue(error.message);
     }

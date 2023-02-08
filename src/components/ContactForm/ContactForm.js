@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 import { AddButton, Form, Input, Label } from './ContactForm.styled';
@@ -16,10 +17,10 @@ const ContactForm = () => {
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (added) {
-      alert(`${name} is already in your phonebook`);
+      toast.error(`${name} is already in your phonebook`);
     } else {
       dispatch(addContact({ name, number }));
-      alert(`${name} was succesfully added to your phonebook`);
+      toast.success(`${name} was succesfully added to your phonebook`);
       form.reset();
     }
   };
