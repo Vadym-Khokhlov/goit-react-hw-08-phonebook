@@ -14,7 +14,7 @@ export const SectionHeading = styled.h2`
 
 export const Container = styled.div`
   padding: 10px 20px;
-  min-height: 'calc(100vh - 50px)';
+  min-height: 'calc(100vh - 20px)';
   display: 'flex';
   align-items: 'center';
   justify-content: 'center';
@@ -25,7 +25,7 @@ export const Container = styled.div`
   border-radius: 0 0 25px 25px;
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+  max-width: 900px;
 `;
 
 export const Homepage = styled.section`
