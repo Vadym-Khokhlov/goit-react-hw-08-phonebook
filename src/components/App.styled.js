@@ -25,6 +25,7 @@ export const Container = styled.div`
   border-radius: 0 0 25px 25px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 'calc(100vh - 20px)';
   max-width: 900px;
 `;
 
