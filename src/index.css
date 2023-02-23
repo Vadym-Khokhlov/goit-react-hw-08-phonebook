@@ -5,6 +5,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./images/body_bg.png');
   background-size: cover;
+  background-position: center;
+  height: 120vh;
+
   background-repeat: no-repeat;
 }
 
